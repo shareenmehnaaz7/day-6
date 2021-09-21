@@ -1,0 +1,90 @@
+create table sample(ID int NOT NULL,Text Varchar2(200) NOT NULL,CreatedOn Date default sysdate)
+
+
+select * from sampletable 
+insert into sample(ID,TEXT) values(1,'Vikash')
+
+
+
+insert into sample(ID) values(2)
+
+
+create table sampletable(ID int NOT NULL,Text Varchar2(200),SampleValue Number(4,2)
+
+
+insert into sampletable(ID,TEXT) values(1,'Vikash')
+
+
+
+create table sampletablex(ID int CONSTRAINT ID_PK PRIMARY KEY,Text Varchar2(200) )
+
+
+create table sampletablexy(ID int,Text Varchar2(200),SampleValue Number(4,2) CONSTRAINT SampleValue_MIN 
+
+
+insert into sampletablexy(ID,SampleValue) values(1,100.00)
+
+
+
+alter table sampletablexy add(xvalue int)
+
+
+select * from sampletablexy
+
+
+alter table sampletablexy Modify(SampleValue int)
+
+
+select * from sampletablexy 
+alter table sampletablexy  drop COLUMN XVALUE
+
+
+
+
+create table sample(ID int NOT NULL, Text varchar2(200) NOT NULL, Createdon Date default sysdate);
+
+insert into sample(ID, TEXT) values (1,'ABC');
+insert into sample(ID) values (2);
+
+select * from sample;
+
+create table sampletable(ID int NOT NULL, Text varchar2(200),samplevalue NUMBER(4,2),  Createdon Date default sysdate, constraint ID_UK UNIQUE(ID));
+select * from sampletable;
+insert into sampletable(ID,TEXT) values(1,'abc');
+insert into sampletable(ID,TEXT) values(1,'xyz');
+
+create table samplex(ID int Constraint ID_PK Primary key(ID), TEXT VARCHAR2(200) );
+
+
+
+alter table sample add(xvalue int);
+
+
+alter table sample modify(TEXT int);
+
+
+alter table sample drop COlUMN xvalue;
+
+
+RENAME sample to sample1;
+
+
+
+truncate table sample1;
+
+
+create table s1(ID int, TEXT varchar(200));
+
+insert into s1(ID,TEXT)  values(1, 'abc', 55.26);
+insert into s1(ID,TEXT)  values(2, 'lmn');
+insert into s1(ID,TEXT)  values(3, 'pqr');
+insert into s1(ID,TEXT)  values(4, 'xyz');
+
+select * from s1
+
+alter table s1 add(xval int);
+
+
+reate table empcopyvas select EMPLOYEE_ID,FIRST_NAME,LAST_NAME,DEPARTMENT_ID
+
+
